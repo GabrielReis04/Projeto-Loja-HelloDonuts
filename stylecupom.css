@@ -1,0 +1,103 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('backgroundcupom.png');
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#mensagem {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#mensagem.success {
+    color: green;
+}
+
+#mensagem.error {
+    color: red;
+}
+
+/* Estilos para os ícones */
+.fab {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+#downloadLink {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: auto;
+    max-width: 130px; /* Defina a largura máxima desejada */
+    margin-top: 10px; /* Define uma margem de 20px na parte superior */
+    display: block; /* Certifique-se de que o elemento seja exibido como bloco para que o margin: 0 auto funcione corretamente */
+}
+
+#downloadLink:hover {
+    background-color: #0056b3;
+}
+
+#downloadLink:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+
+/*remover os numeros */
+.sem-numero {
+    padding: 10px 20px;
+    margin: auto;
+    list-style-type: none; /* Remove os números */
+    padding-left: 0; /* Remove o recuo padrão à esquerda */
+    /* Outros estilos, se necessário */
+}

@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --red: #d63a25;
+    background-image: url('background.png');
+    --dark: #1e1c2a;
+}
+
+body {
+    color: var(--dark);
+    background: var(--white);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.1rem 0.5rem #DF3F7B;
+    width: 100%;
+    height: 70px;
+    /* Defina a altura desejada */
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    /* Fixe o cabeçalho no topo */
+    left: 0;
+    /* Fixe o cabeçalho na esquerda */
+    right: 0;
+    /* Fixe o cabeçalho na direita */
+}
+
+
+.navigation .logo img {
+
+    width: 105px;
+    height: 105px;
+    margin-left: 50px;
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a {
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navigation ul li a:hover {
+    color: #3d094f;
+}
+
+.navigation i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #600d7c;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text {
+    max-width: 37rem;
+}
+
+.home-text .text-h4 {
+    font-size: 1.5rem;
+    color: #ee8ece;
+    margin-bottom: 1rem;
+}
+
+.home-text .text-h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+    color: #140c11;
+}
+
+.home-text p {
+    margin-bottom: 4rem;
+}
+
+.home-btn {
+    padding: 15px 45px;
+    background: #ee8ece;
+    color: var(--black);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.home-text .logoo {
+    max-width: 200%;
+    /* Define a largura máxima como 100% do elemento pai */
+    height: 500px;
+    /* Mantém a proporção original da imagem */
+    margin-left: -200px;
+    /* Use margin-left com um valor negativo para mover a imagem para a esquerda */
+}
+
+
+.home-btn:hover {
+    background: #600d7c;
+}
+
+.home-img img {
+    width: 100%;
+}
+
+/* Estilos para o rodapé */
+footer {
+    position: relative;
+    /* Para criar um contexto de posicionamento para elementos filhos */
+    /* Outros estilos do rodapé aqui, se necessário */
+}
+
+/* Estilos para o elemento de informações do criador */
+.criador {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    /* Colocado no canto inferior direito com algum espaçamento */
+    font-size: 12px;
+    /* Tamanho de fonte menor */
+    color: #666;
+    /* Cor de texto suave */
+    left: 0;
+    padding: 10px;
+}
+
+
+
+
+
+@media (max-width:785px) {
+
+    .home {
+
+        background-image: url('banner.png');
+        height: 1000px;
+        background-size: cover;
+    }
+
+    .ban-promocao {
+        background-color: #FEBC4E;
+        width: 122px;
+        /* Largura reduzida */
+        height: 70px;
+        margin-left: -50px;
+        /* Mova o banner da direita para a esquerda */
+    }
+
+
+    .home-text .logoo {
+        margin-top: -25px;
+        width: 200px;
+        height: 75px;
+        margin-left: -10px;
+    }
+
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .navigation .logo img {
+        width: 75px;
+        height: 75px;
+        margin-left: 10px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-color: #FEBC4E;
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    /*main*/
+    .home {
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    .home .text-h4 {
+        font-size: 15px;
+    }
+
+    .home .text-h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .home-img {
+        width: 100%;
+        position: relative;
+        margin-top: -65px;
+    }
+
+
+}
+
+.form {
+    text-align: center;
+    top: 70px;
+
+}
+
+
+
+/* Contêiner de Itens de Desconto */
+.discounts-container {
+    background-image: url('backgroundcupom.png');
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+
+    /* Adicione bordas arredondadas */
+    border-radius: 20px;
+    /* Ajuste o valor conforme necessário */
+
+    /* Adicione sombreamento semi-transparente */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    /* Ajuste o valor da sombra conforme necessário */
+}
+
+
+/* Item de Desconto */
+.discount-item {
+    border-radius: 10px;
+    /* Você pode ajustar o valor para controlar o grau de arredondamento */
+    width: 300px;
+    background-color: #fff;
+    /* Cor de Fundo do Item de Desconto */
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    text-align: center;
+}
+
+.discount-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o botão personalizado */
+.custom-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b6b, #ff007f);
+    /* Gradiente de Cores */
+    box-shadow: 0 5px 15px rgba(255, 0, 127, 0.3);
+    /* Sombra */
+    border-radius: 30px;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    /* Cor do Texto */
+    font-weight: 710;
+    /* Peso da Fonte */
+    z-index: 1;
+    transition: 0.5s;
+    position: relative;
+    text-align: center;
+}
+
+.custom-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-button:hover {
+    letter-spacing: 3px;
+    transform: translateY(-2px);
+}
+
+.custom-button::before,
+.custom-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Impede que os pseudo-elementos interfiram nos cliques */
+}
+
+.custom-button::before {
+    background: linear-gradient(45deg, transparent, rgba(255, 0, 127, 0.3));
+    /* Gradiente de Cores */
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.custom-button:hover::before {
+    transform: translateX(0);
+}
+
+.custom-button::after {
+    background: linear-gradient(45deg, rgba(255, 0, 127, 0.3), transparent);
+    /* Gradiente de Cores */
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.custom-button:hover::after {
+    transform: translateX(0);
+}
+
+
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+
+.home {
+
+    background-image: url('banner.png');
+
+    background-size: cover;
+}
+
+
+
+
+/* Estilo para o botão flutuante do WhatsApp */
+.whatsapp-float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 1000;
+    /* Certifique-se de que o botão esteja acima de outros elementos */
+}
+
+
+.ban-promocao {
+    background-color: #FEBC4E;
+    background-image: repeating-linear-gradient(to bottom, #DF407A 0, #DF407A 20px, transparent 20px, transparent 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito de hover para o botão flutuante do WhatsApp */
+.whatsapp-float-button:hover {
+    background-color: #128C7E;
+    /* Nova cor de fundo quando o mouse passa por cima */
+    transform: translateY(-5px);
+    /* Move o botão 5 pixels para cima */
+}
+
+/* Estilizando o rodapé */
+footer {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* Tornar o rodapé um flex container */
+    justify-content: space-between;
+    /* Distribuir o espaço entre as seções */
+}
+
+/* Estilizando as seções do rodapé */
+footer .contato,
+footer .menu-institucional,
+footer .redes-sociais {
+    width: 30%;
+    /* Defina a largura de cada seção */
+    text-align: center;
+}
+
+/* Adicionando estilo para os ícones das redes sociais */
+footer .redes-sociais a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 24px;
+    /* Tamanho dos ícones */
+}
+
+/* Adicionando estilo para os links das redes sociais */
+footer .redes-sociais a::before {
+    content: "\f0e1";
+    /* Código do ícone FontAwesome (exemplo: ícone de Facebook) */
+    font-family: FontAwesome;
+    margin-right: 5px;
+    color: #333;
+    /* Cor dos ícones */
+}
+
+/* Estilizando os títulos das seções */
+footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilizando ícones e links */
+footer .icone-tel img,
+footer .icone-email img {
+    max-width: 30px;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff6b6b;
+}
+
+/* Estilizando a lista de links do menu institucional */
+footer .menu-institucional ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer .menu-institucional li {
+    margin-bottom: 10px;
+}
+
+/* Estilizando os links das redes sociais */
+footer .redes-sociais a {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Estilizando os ícones das redes sociais individualmente */
+footer .redes-sociais a[href*="facebook.com"]::before {
+    content: "\f09a";
+    /* Ícone do Facebook */
+}
+
+footer .redes-sociais a[href*="instagram.com"]::before {
+    content: "\f16d";
+    /* Ícone do Instagram */
+}
+
+footer .redes-sociais a[href*="twitter.com"]::before {
+    content: "\f099";
+    /* Ícone do Twitter */
+}
+
+footer .redes-sociais a[href*="youtube.com"]::before {
+    content: "\f167";
+    /* Ícone do YouTube */
+}
+
+
+
+.fixed-header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Adicione esta propriedade para estender o cabeçalho até a borda direita */
+    width: 100%;
+    z-index: 1000;
+}
+
+body .special-discounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10;
+    margin: 0;
+    overflow: hidden;
+}
+
+body .special-discounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15;
+    margin: 0;
+    overflow: hidden;
+}
